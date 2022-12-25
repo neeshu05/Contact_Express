@@ -1,0 +1,36 @@
+<html>
+    <title>
+    <%= title %>
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="/css/home.css">
+    <body>
+        <h1 id="heading">Contact List</h1>
+            <ul class="contact">
+            <% for(let i of contact_list){ %>
+                <li class="val">
+                    <div class="details">
+                    <p><%= i['name'] %></p>
+                    <p><%= i.phone %></p>
+                    </div>
+                    <a href = "/contact-delete/<%= i.phone%>">
+                        delete
+                    </a>
+                </li>
+            <%}%> 
+            </ul>
+        <div style="display:flex;align-items: center;">
+        <form action="/con" method="post">
+            <input type="text" name="my_name" placeholder="enter your name" required>
+            <input type="number" name="my_phone" placeholder="enter your phone number" required>
+            <button type="submit"> submit</button>
+        </form>
+        </div>
+    <script src="/js/home.js">
+
+    </script>
+    </body>
+</html>
