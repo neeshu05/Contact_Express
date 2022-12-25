@@ -1,0 +1,22 @@
+#heading{
+    text-align: center;
+    color: gray;
+}
+.contact{
+    list-style: none;
+    position: relative;
+}
+.val{
+    background-color: aqua;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.val:hover{
+    background-color: black;
+    color: beige;
+}
+.val .details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
